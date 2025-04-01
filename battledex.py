@@ -2906,4 +2906,4 @@ async def show_help(ctx):
     """
     await ctx.send(help_message)
 
-bot.run("MTM0MzAwODg4NTU5MzczNTIzMQ.G_Y9zm.E-iZxZ_d-th7_ptJZTLEKtN1KTG5F2T3xmyHmw")
+bot.run("TOKEN")
