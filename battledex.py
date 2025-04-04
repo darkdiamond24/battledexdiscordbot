@@ -2191,7 +2191,8 @@ REFERENCE_IMAGES = {
     "B-Day 24": "bday 24.png",
     "event BE": "event BE.png",
     "event Reich": "event Reich.png",
-    "event RE": "event RE.png"
+    "event RE": "event RE.png",
+    "spring": "spring 25.png"
     }
 
 # Dictionary for alternative names
@@ -2666,8 +2667,8 @@ async def addball(ctx, *, ball_name: str):
                 return
     
     ball_type = detect_ball_type(user_image_path)
-    atk_buffs = {"shiny": 2500, "mythic": random.randint(4200, 6000), "boss": 10000, "normal": 0, "LNY": 750, "present": 250, "NY": 250, "summer": 250, "gobble": 250, "Xmas 22": 750, "pride": 250, "bat": 250, "CC": 0, "diamond": 0, "emerald": 0, "spooky": 750, "clover": 250, "easter": 250, "ghost": 250, "tree": 250, "cake": 250, "event RE": 1000, "event Reich": 1000, "event BE": 1000, "valentine": 250}
-    hp_buffs = {"shiny": 2500, "mythic": random.randint(6000, 7200), "boss": 10000, "normal": 0, "LNY": 750, "present": 250, "NY": 250, "summer": 250, "gobble": 250, "Xmas 22": 750, "pride": 250, "bat": 250, "CC": 0, "diamond": 0, "emerald": 0, "spooky": 750, "clover": 250, "easter": 250, "ghost": 250, "tree": 250, "cake": 250, "event RE": 1000, "event Reich": 1000, "event BE": 1000, "valentine": 250}
+    atk_buffs = {"shiny": 2500, "mythic": random.randint(4200, 6000), "boss": 10000, "normal": 0, "LNY": 750, "present": 250, "NY": 250, "summer": 250, "gobble": 250, "Xmas 22": 750, "pride": 250, "bat": 250, "CC": 0, "diamond": 0, "emerald": 0, "spooky": 750, "clover": 250, "easter": 250, "ghost": 250, "tree": 250, "cake": 250, "event RE": 1000, "event Reich": 1000, "event BE": 1000, "valentine": 250, "spring 25": 250}
+    hp_buffs = {"shiny": 2500, "mythic": random.randint(6000, 7200), "boss": 10000, "normal": 0, "LNY": 750, "present": 250, "NY": 250, "summer": 250, "gobble": 250, "Xmas 22": 750, "pride": 250, "bat": 250, "CC": 0, "diamond": 0, "emerald": 0, "spooky": 750, "clover": 250, "easter": 250, "ghost": 250, "tree": 250, "cake": 250, "event RE": 1000, "event Reich": 1000, "event BE": 1000, "valentine": 250, "spring 25": 250}
     symbols = {"shiny": "✨", "mythic": "🌌", "boss": "⚔️", "normal": "", "summer": ":sunny:", "clover": ":four_leaf_clover:", "NY": ":sparkler:", "LNY": "🧧", "present": ":gift:", "spooky": "🎃", "ghost": ":ghost:", "bat": ":bat:", "Xmas 22": ":snowflake:", "easter": ":egg:", "cake": ":tada:", "gobble": ":turkey:", "tree": "🎄", "pride": ":rainbow_flag:", "CC": ":trophy:", "diamond": ":gem:", "emerald": "❇️", "valentine": ":revolving_hearts:", "B-Day 24": "🎂", "event RE": ":crown:", "event Reich": ":crown:", "event BE": ":crown:" }
     
     buff_value = atk_buffs.get(ball_type, (int(ball_type) * 1000 if ball_type.isdigit() else 0))
