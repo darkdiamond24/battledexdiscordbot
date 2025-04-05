@@ -103,10 +103,9 @@ REFERENCE_IMAGES = {
 }
 
 def detect_ball_type(user_image_path):
-    
     user_img = cv2.imread(user_image_path)
     if user_img is None:
-        return None
+        return "normal"
     
     for ball_type, ref_path in REFERENCE_IMAGES.items():
         ref_img = cv2.imread(ref_path) if isinstance(ref_path, str) and os.path.isfile(ref_path) else None
@@ -116,7 +115,7 @@ def detect_ball_type(user_image_path):
         if np.array_equal(user_img[-1, -1], ref_img[-1, -1]):
             return ball_type
     
-    return None
+    return "normal"
 
 # Define reference images globally so they are accessible everywhere
 # Dictionary for alternative names
